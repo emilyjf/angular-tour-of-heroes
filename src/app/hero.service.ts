@@ -9,7 +9,7 @@ import { Hero } from './hero';
 export class HeroService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private heroesUrl = 'api/heroes';  // URL to web api
+  private heroesUrl = 'http://jsonplaceholder.typicode.com/users/';  // URL to web api
 
   constructor(private http: Http) { }
 
@@ -59,3 +59,4 @@ export class HeroService {
     return Promise.reject(error.message || error);
   }
 }
+
